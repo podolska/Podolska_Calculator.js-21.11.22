@@ -3,19 +3,19 @@ function a(){
     const calc = prompt('What you want to do?' + ' ' + 'add, sub, mult, div');
     let status = false;
 
-    switch (true) {
-        case (calc === null):
+    switch (calc) {
+        case null:
             alert('Click cancel');
             status = true;
             break;
-        case calc.trim() === '':
+        case '':
             alert('Empty String');
             status = true;
             break;
-        case calc !== 'add' && calc !=='sub' && calc !== 'mult' && calc !=='div' :
-            alert('Введите правильное значение');
-            status = true;
-            break;
+        // case calc != 'add' && calc != 'sub' && calc != 'mult' && calc != 'div' :
+        //     alert('Введите правильное значение');
+        //     status = true;
+        //     break;
     }
     if (status){
         return;
@@ -25,16 +25,16 @@ function a(){
         const num = prompt('Ввести ' + str + ' число:');
         let statusForNum = false;
 
-        switch (true) {
-            case (num === ''):
+        switch (num) {
+            case '':
                 alert('You are not typed num');
                 statusForNum = true;
                 break;
-            case (num === null):
+            case null:
                 alert('Click cancel');
                 statusForNum = true;
                 break;
-            case (isNaN( +num )):
+            case !isNaN(num) || num:
                 alert('number is Ba_NaN');
                 statusForNum = true;
                 break;
