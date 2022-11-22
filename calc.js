@@ -12,10 +12,14 @@ function a(){
             alert('Empty String');
             status = true;
             break;
-        // case calc != 'add' && calc != 'sub' && calc != 'mult' && calc != 'div' :
-        //     alert('Введите правильное значение');
-        //     status = true;
-        //     break;
+
+        case 'add':
+        case 'sub':
+        case 'mult':
+        case 'div':
+        default:
+            alert('Введите правильное значение');
+            status = true;
     }
     if (status){
         return;
